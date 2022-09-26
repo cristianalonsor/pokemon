@@ -1,0 +1,19 @@
+<div class="container" *ngIf="allPokemonsList?.results">
+    <div class="list-group" *ngFor="let pokemon of allPokemonsList.results">
+        <button routerLink="/pokemon" class="list-group-item list-group-item-action">{{pokemon.name}}</button>
+    </div>
+    <nav aria-label="Page navigation">
+      <ul class="pagination">
+        <li (click)="prevPokemons()"  class="page-item">
+          <a class="page-link" href="#" aria-label="Previous">
+            <span aria-hidden="true">&laquo;</span>
+          </a>
+        </li>
+        <li (click)="nextPokemons()" class="page-item">
+          <a class="page-link" href="#" aria-label="Next">
+            <span aria-hidden="true">&raquo;</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+</div>
